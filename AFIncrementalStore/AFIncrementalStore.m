@@ -735,7 +735,7 @@ withAttributeAndRelationshipValuesFromManagedObject:(NSManagedObject *)managedOb
         NSMutableDictionary *mutableUserInfo = [NSMutableDictionary dictionary];
         [mutableUserInfo setValue:[NSString stringWithFormat:NSLocalizedString(@"Unsupported NSFetchRequestResultType, %d", nil), persistentStoreRequest.requestType] forKey:NSLocalizedDescriptionKey];
         if (error) {
-            *error = [[NSError alloc] initWithDomain:AFNetworkingErrorDomain code:0 userInfo:mutableUserInfo];
+            *error = [[NSError alloc] initWithDomain:@"AFNetworkingErrorDomain" code:0 userInfo:mutableUserInfo];
         }
         
         return nil;
